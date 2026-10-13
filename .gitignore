@@ -7,4 +7,10 @@ __pycache__/
 .DS_Store
 tmp_trainer/
 dataset/
-models/
+models/*
+!models/nlptown_bert_product/
+models/nlptown_bert_product/*
+!models/nlptown_bert_product/config.json
+!models/nlptown_bert_product/model.safetensors
+!models/nlptown_bert_product/tokenizer.json
+!models/nlptown_bert_product/tokenizer_config.json
