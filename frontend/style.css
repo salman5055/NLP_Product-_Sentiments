@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #1e3a8a 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #0f766e 0%,
+            transparent 30%
+        ),
+        #020617;
+
+    color: #f8fafc;
+
+    padding: 30px;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+.badge {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border: 1px solid #334155;
+
+    border-radius: 20px;
+
+    background: rgba(15, 23, 42, 0.7);
+
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+.header h1 {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+
+    letter-spacing: -1px;
+}
+
+
+.header p {
+    color: #94a3b8;
+
+    font-size: 16px;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    gap: 25px;
+}
+
+
+.card {
+    background: rgba(15, 23, 42, 0.88);
+
+    border: 1px solid #1e293b;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.card-title {
+    font-size: 20px;
+
+    margin-bottom: 8px;
+}
+
+
+.card-subtitle {
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+
+label {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+/* ================= TEXTAREA ================= */
+
+textarea {
+    width: 100%;
+
+    min-height: 210px;
+
+    resize: vertical;
+
+    background: #020617;
+
+    color: #f8fafc;
+
+    border: 1px solid #334155;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+textarea::placeholder {
+    color: #475569;
+}
+
+
+textarea:focus {
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 14px 20px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.analyze-btn {
+    flex: 1;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+
+.analyze-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+.clear-btn {
+    background: #1e293b;
+
+    color: #cbd5e1;
+
+    border: 1px solid #334155;
+}
+
+
+.clear-btn:hover {
+    background: #334155;
+}
+
+
+button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ================= EXAMPLES ================= */
+
+.examples {
+    margin-top: 25px;
+}
+
+
+.examples-title {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+
+.example-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.example-btn {
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    border: 1px solid #334155;
+
+    padding: 8px 12px;
+
+    font-size: 12px;
+}
+
+
+.example-btn:hover {
+    border-color: #38bdf8;
+
+    color: #38bdf8;
+}
+
+
+/* ================= RESULT ================= */
+
+.result-card {
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.result-placeholder {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #475569;
+
+    padding: 30px;
+}
+
+
+.result-placeholder-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.result {
+    display: none;
+
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+
+.result-label {
+    color: #64748b;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.stars {
+    font-size: 38px;
+
+    margin: 18px 0;
+
+    letter-spacing: 3px;
+}
+
+
+.sentiment {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+
+/* ================= SENTIMENT COLORS ================= */
+
+.sentiment.very-positive {
+    color: #22c55e;
+}
+
+
+.sentiment.positive {
+    color: #4ade80;
+}
+
+
+.sentiment.neutral {
+    color: #facc15;
+}
+
+
+.sentiment.negative {
+    color: #fb923c;
+}
+
+
+.sentiment.very-negative {
+    color: #ef4444;
+}
+
+
+/* ================= CONFIDENCE ================= */
+
+.confidence-box {
+    background: #020617;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    text-align: left;
+}
+
+
+.confidence-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.confidence-title {
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+.confidence-value {
+    font-weight: bold;
+}
+
+
+.progress {
+    height: 8px;
+
+    background: #1e293b;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.progress-bar {
+    height: 100%;
+
+    width: 0%;
+
+    background: #38bdf8;
+
+    border-radius: 10px;
+
+    transition: width 0.6s ease;
+}
+
+
+/* ================= ERROR ================= */
+
+.error {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #450a0a;
+
+    border: 1px solid #7f1d1d;
+
+    color: #fecaca;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    margin-top: 25px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+}

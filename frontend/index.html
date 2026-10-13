@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Product Sentiment Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="badge">
+                NLP • BERT • AI
+            </div>
+
+            <h1>
+                Product Sentiment Analyzer
+            </h1>
+
+            <p>
+                AI-powered product review analysis using NLPTown BERT
+            </p>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <main class="dashboard">
+
+            <!-- INPUT CARD -->
+            <section class="card">
+
+                <h2 class="card-title">
+                    Analyze Customer Review
+                </h2>
+
+                <p class="card-subtitle">
+                    Enter a product review and let the AI predict its rating and sentiment.
+                </p>
+
+
+                <label for="review">
+                    Product Review
+                </label>
+
+                <textarea
+                    id="review"
+                    placeholder="Example: This product is excellent. It works perfectly and I am very happy with it."
+                ></textarea>
+
+
+                <!-- BUTTONS -->
+                <div class="buttons">
+
+                    <button
+                        id="analyzeBtn"
+                        class="analyze-btn"
+                    >
+                        Analyze Review
+                    </button>
+
+                    <button
+                        id="clearBtn"
+                        class="clear-btn"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <!-- EXAMPLES -->
+                <div class="examples">
+
+                    <div class="examples-title">
+                        Try an example
+                    </div>
+
+                    <div class="example-buttons">
+
+                        <button
+                            class="example-btn"
+                            data-review="This product is excellent and works perfectly."
+                        >
+                            Excellent
+                        </button>
+
+                        <button
+                            class="example-btn"
+                            data-review="The product is okay. Nothing special."
+                        >
+                            Neutral
+                        </button>
+
+                        <button
+                            class="example-btn"
+                            data-review="This product is terrible and stopped working."
+                        >
+                            Terrible
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ERROR -->
+                <div
+                    id="error"
+                    class="error"
+                ></div>
+
+            </section>
+
+
+            <!-- RESULT CARD -->
+            <section class="card result-card">
+
+                <h2 class="card-title">
+                    Analysis Result
+                </h2>
+
+                <p class="card-subtitle">
+                    AI prediction
+                </p>
+
+
+                <!-- PLACEHOLDER -->
+                <div
+                    id="placeholder"
+                    class="result-placeholder"
+                >
+
+                    <div>
+
+                        <div class="result-placeholder-icon">
+                            🤖
+                        </div>
+
+                        <p>
+                            Your sentiment result
+                            <br>
+                            will appear here
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULT -->
+                <div
+                    id="result"
+                    class="result"
+                >
+
+                    <div class="result-label">
+                        Predicted Rating
+                    </div>
+
+
+                    <div
+                        id="stars"
+                        class="stars"
+                    ></div>
+
+
+                    <div
+                        id="sentiment"
+                        class="sentiment"
+                    ></div>
+
+
+                    <!-- CONFIDENCE -->
+                    <div class="confidence-box">
+
+                        <div class="confidence-header">
+
+                            <span class="confidence-title">
+                                Model Confidence
+                            </span>
+
+                            <span
+                                id="confidenceValue"
+                                class="confidence-value"
+                            >
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div
+                                id="progressBar"
+                                class="progress-bar"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            Powered by NLPTown BERT • FastAPI • Python
+
+        </footer>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
